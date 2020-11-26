@@ -43,7 +43,19 @@ class Map
         # return value that is deleted
         value
     end
+    
     def show 
+        deep_dup(underlying_array)
+    end 
+    
+    private
+    
+    # attr_accessor creates these methods for you, read-only
+    attr_reader :underlying_array
+
+    def deep_dup(arr)
+        # if arr is an Array deep_dup "recursion" else return element
+        arr.map { | ele | ele.is_a?(Array) ? deep_dup(ele) : ele }
         
     end 
 
