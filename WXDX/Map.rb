@@ -36,7 +36,12 @@ class Map
     end
     
     def delete(key)
-        
+        # value get(key)
+        value = get(key)
+        # reject where in a block the value is not true
+        underlying_array.reject { | ele | ele[0] == key }
+        # return value that is deleted
+        value
     end
     def show 
         
