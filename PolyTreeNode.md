@@ -86,3 +86,7 @@ key-value pairs
 
 if you just append it to the end for create or set key-value pairs it is not a set or unique
 so needs to, 
+
+same guarantees of behavior and functionality, ADTs.
+
+Stack ADT,

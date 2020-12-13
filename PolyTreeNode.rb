@@ -14,6 +14,7 @@ class PolyTreeNode
    def children
       #returns an array of children of a node
       #iterate over nodes to return an array of children 
+      
    end
    
     
