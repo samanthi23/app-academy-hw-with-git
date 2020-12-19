@@ -80,7 +80,7 @@ dictionary ADT is you read a word then it's definition:
 
 key-value pairs
 
-[["hello", "world", [2,4]]]
+[["hello", "world"], [2,4]]
 
 "hello" => "world"
 
