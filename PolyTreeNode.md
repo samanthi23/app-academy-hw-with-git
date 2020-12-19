@@ -89,4 +89,14 @@ so needs to,
 
 same guarantees of behavior and functionality, ADTs.
 
-Stack ADT,
+Stack ADT, (15:34)
+can be done with a Stack. Recursion.
+
+Queue, is First In First Out, in a line in NYC.
+don't call it push and shift
+
+
+
+
+
+

@@ -7,7 +7,8 @@ class PolyTreeNode
    
    def parent # parenthesis ? 
        # returns nodes parent
-       @parent = parent.first
+       @parent = parent.first # peek in Queue, also peek at first element in children array, root
+       # return first node, or parent node after peeking at first node
        return parent
    end
    
