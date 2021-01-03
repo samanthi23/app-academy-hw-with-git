@@ -95,6 +95,16 @@ can be done with a Stack. Recursion.
 Queue, is First In First Out, in a line in NYC.
 don't call it push and shift
 
+Reading: 
+
+top-level node holds the root
+here it holds /
+the children of the nodes holds one level deeper
+the lowest level with no children are called leaves 
+
+DFS, stack or recursion
+BDF, layer by layer, 
+
 
 
 
