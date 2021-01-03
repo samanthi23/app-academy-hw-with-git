@@ -28,6 +28,16 @@ class Map
     end
 
     def get(key)
+# |ele| 
+# pair_index = underlying_array.index { |pair| pair[0] == key }
+#a = [ "a", "b", "c" ]
+#a.index("b")              #=> 1
+#a.index("z")              #=> nil
+#a.index {|x| x == "b"}    #=> 1
+    
+    
+    
+    # ruby docs returns index of 
         # review Data Structures lectures @ Harvard. 
         # returns value array[0][1] if array[0] == key, 
         #array[0][1] == value else returns 

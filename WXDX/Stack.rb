@@ -7,7 +7,7 @@ class Stack
     def push(el)
       # adds to stack  
       @ivar.push(el)
-      self
+      self # review self meaning, also do App Academy again
     end
     
     def pop

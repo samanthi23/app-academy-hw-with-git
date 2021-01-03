@@ -6,7 +6,7 @@ class Stack
 
   def push(el)
     underlying_array.push(el)
-    el
+    el # value
   end
 
   def pop
