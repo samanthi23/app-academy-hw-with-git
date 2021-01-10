@@ -31,6 +31,9 @@ class Map
     
     def get(key)
         # index 
+       # @ivar.index { | pair | pair[0] == key }
+       @ivar.each { | ele | return ele[1] if ele[0] == key }
+       nil
         # 
     end
     

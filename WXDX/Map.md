@@ -72,3 +72,21 @@ class Map
 
 end 
 ```
+
+find the index 0, 1, 2 for three key-value pairs
+return the value if the key is there
+if no key return nil
+
+```
+def get(key)
+
+ underlying_array.each { | pair | return pair[1] if pair[0] == key }
+ nil # if not found
+
+end
+```
+
+# Map is also called a dictionary
+
+3 public methods get, set, delete
+
