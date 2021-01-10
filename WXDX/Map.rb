@@ -44,6 +44,19 @@ class Map
     end 
     
     def show
-        
+        deep_dup(ivar)
     end 
+    
+    # use deep-dup
+    
+    
+    private 
+    
+    attr_reader :ivar
+    
+    def deep_dup(arr)
+       arr.map { |ele| ele.is_a?(Array) ? deep_dup(ele) : ele } 
+    end
+    
+    
 end 

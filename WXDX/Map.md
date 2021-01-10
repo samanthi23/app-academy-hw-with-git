@@ -126,6 +126,46 @@ hello => world
 
 Unique keys!!
 
+``` 
+def show
+
+end
+
+private
+
+end
+```
+
+private methods of a dog class compared to animal class
+
+different authors for super and child classes or objects, if other is able to 
+change private fields then my code would break so private fields are
+only changeable in that class for example the dog class 
+
+get around that by using the methods, that only the Class itself
+or the sub-Classes to use
+
+```
+def show
+    deep_dup(underlying_array)
+  end
+
+  private
+
+  attr_reader :underlying_array
+  
+  def deep_dup(arr)
+    arr.map { |el| el.is_a?(Array) ? deep_dup(el) : el }
+  end  
+```
+
+## .map
+
+returns a new array with results of running the block {} once
+
+```
+(1..4).map { |i| i*i }      #=> [1, 4, 9, 16]
+```
 
 
 
