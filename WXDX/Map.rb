@@ -33,12 +33,14 @@ class Map
         # index 
        # @ivar.index { | pair | pair[0] == key }
        @ivar.each { | ele | return ele[1] if ele[0] == key }
-       nil
+       return nil
         # 
     end
     
     def delete(key)
-        
+        value = get(key)
+        @ivar.reject! { |ele| ele[0] == key }
+        return value
     end 
     
     def show

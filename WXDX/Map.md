@@ -90,3 +90,43 @@ end
 
 3 public methods get, set, delete
 
+## delete a key
+
+```
+arr = [1, 2, 3, 4, 5, 6]
+arr.reject { |a| a < 3 }     #=> [3, 4, 5, 6]
+.reject!
+```
+
+value = get(key)
+if ele[0] == key return value 
+
+# A Map
+
+is a set of key value pairs
+
+mapping of keys to values
+
+hashmap 
+
+or you can use an array for a Map ADT.
+
+## Array
+
+nest key-value pairs in a 2nd array
+
+```
+[["hello", "world"], [2,4]]
+```
+
+```
+hello => world
+2 => 4
+```
+
+Unique keys!!
+
+
+
+
+
