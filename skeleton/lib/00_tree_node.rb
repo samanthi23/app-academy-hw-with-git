@@ -19,9 +19,15 @@ class PolyTreeNode
     
     def parent=(value)
         @parent = value
+        # unless @parent == nil
+        self
         
+    end
+    
+    def inspect
+        @value.inspect
     end
 end
 
 
-#p PolyTreeNode #=> "hello world"
+#p PolyTreeNode() #=> "hello world"
