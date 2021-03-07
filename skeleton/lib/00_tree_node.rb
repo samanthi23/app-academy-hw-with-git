@@ -18,8 +18,16 @@ class PolyTreeNode
     end 
     
     def parent=(value)
+        return if self.parent == nil # handles nil without issue
+        
+        
+        @parent = value
+        return self.parent._children << self unless self.parent.nil?
+        
         @parent = value
         # unless @parent == nil
+        # self.parent._children << self
+        # .delete
         self
         
     end
