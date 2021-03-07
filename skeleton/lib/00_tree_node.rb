@@ -10,30 +10,36 @@ class PolyTreeNode
     end
     
     def children
-        @children
+        @children.dup
     end 
     
     def value
         @value
     end 
     
-    def parent=(value)
-        return if self.parent == nil # handles nil without issue
+    def parent=(parent)
+        return if self.parent == parent # handles nil without issue
         
+        # detach
+        if self.parent
+           self.parent._children.delete(self) 
+        end
         
-        @parent = value
-        return self.parent._children << self unless self.parent.nil?
+        @parent = parent
+        self.parent._children << self unless self.parent.nil?
         
-        @parent = value
-        # unless @parent == nil
-        # self.parent._children << self
-        # .delete
         self
         
     end
     
     def inspect
         @value.inspect
+    end
+    
+    protected # to give node direct access to another node's children
+    
+    def _children
+        @children
     end
 end
 
