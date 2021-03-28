@@ -35,6 +35,13 @@ class PolyTreeNode
     def add_child(child_node)
        child_node.parent = self
     end
+    
+    def remove_child(child_node)
+       child_node.parent = nil
+       # node is not a child
+       # include?(self) not a child not [2,3] maybe 4 or 5 child node
+       # some other node's child 4 or 5
+    end
 
     def inspect
         @value.inspect
