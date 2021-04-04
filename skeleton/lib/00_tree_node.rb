@@ -37,10 +37,15 @@ class PolyTreeNode
     end
     
     def remove_child(child_node)
-       child_node.parent = nil
        # node is not a child
        # include?(self) not a child not [2,3] maybe 4 or 5 child node
        # some other node's child 4 or 5
+       if (child_node) && !self.children.include?(child_node)
+           raise "not a child node"
+       end 
+       
+       
+       child_node.parent = nil
     end
 
     def inspect
