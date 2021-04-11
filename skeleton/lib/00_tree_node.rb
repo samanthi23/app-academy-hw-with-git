@@ -48,17 +48,19 @@ class PolyTreeNode
        child_node.parent = nil
     end
     
-    def dfs(value) 
+    def dfs(target) 
        if self == nil then return
        if self.value == target then return self
        else
            # keep traversing the dfs
            children.each do |child|
-           search_result = dfs(value) 
+                search_result = child.dfs(target) 
+                
            end
         end 
        nil
     end
+end
 
     def inspect
         @value.inspect
