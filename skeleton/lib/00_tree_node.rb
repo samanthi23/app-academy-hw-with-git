@@ -49,18 +49,24 @@ class PolyTreeNode
     end
     
     def dfs(target) 
-       if self == nil then return
+       return nil if self == nil
        if self.value == target then return self
        else
            # keep traversing the dfs
-           children.each do |child|
+           self.children.each do |child|
                 search_result = child.dfs(target) 
+                return search_result unless search_result.nil?
                 
+                # search_result is nil for nodes 1, 2, 4.
+                # pop the last node ( node 4 ) from the stack 
+                # if not found in path pop off node with value 4 then 
+                # got to node 2's children go to the right side if 
+                # not found in node 2's left children
            end
         end 
        nil
     end
-end
+
 
     def inspect
         @value.inspect
