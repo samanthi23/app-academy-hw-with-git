@@ -123,3 +123,11 @@ also not going to try L-shaped moves that I've already tried
     }
 ```
 
+n which cell in the puzzle you are focusing on, like in Sudoku
+
+n which piece in the overall problem am I focused on
+
+for loop is trying all possible values
+
+# The root node of the tree should be the knight's starting position. 
+
