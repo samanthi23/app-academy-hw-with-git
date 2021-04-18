@@ -45,3 +45,12 @@ or from [0,0], [2,1]
 ```
 kpf = KnightPathFinder.new([0,0])
 ```
+
+# backtracking
+
+happens when I return 
+
+and returning brings me back to previous position of Knight piece
+
+also not going to try L-shaped moves that I've already tried
+
