@@ -69,21 +69,23 @@ class PolyTreeNode
     
     def bfs(target)
        queue = [self]
-       until queue.empty?
        
-        element = queue.shift # first element
+       until queue.empty?
+        element = queue.shift
         if element.value == target
-            return element # found
+            return element 
         end
         
-           
-           element.children.each do |child|
-              queue << child 
-           end
+        element.children.each do |child|
+            queue << child 
+        end 
        end
-       nil # not found
+       
+       nil
+   
     end
 
+    # bfs 34:36 Data Structures
 
     def inspect
         @value.inspect
