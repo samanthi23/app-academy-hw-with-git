@@ -215,3 +215,28 @@ if not off board valid move, for each MOVES see if off board
 # to do 
 
 build my own Rspec for this project or testing
+
+## irb 
+
+https://medium.com/@elle.westervelt/testing-your-ruby-code-irb-vs-pry-af12c87f87aa
+
+```
+[11:37:41] ~
+// ♥ irb
+2.3.3 :001 > class Mariel
+2.3.3 :002?>   def drinks_coffee
+2.3.3 :003?>    return "Mariel drinks a cup of coffee. ☕️"
+2.3.3 :004?>    end
+2.3.3 :005?> end
+=> :drinks_coffee
+2.3.3 :006 > Mariel.new.drinks_coffee
+=> "Mariel drinks a cup of coffee. ☕️"
+```
+
+## pry
+
+gem install pry
+
+require 'pry'
+
+binding.pry right before like break
