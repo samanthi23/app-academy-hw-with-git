@@ -21,14 +21,30 @@ class KnightPathFinder
         # if not off board coord_x and coord_y then valid move
         valid_moves = []
         coord_x, coord_y = pos
-        p coord_x
-        p coord_y
-        return pos 
+        #p coord_x
+        #p coord_y
+        MOVES.each do |(x_moves, y_moves)|
+         #   p x_moves
+         #   p y_moves # nil
+           new_pos =  [coord_x + x_moves, coord_y + y_moves] 
+           p new_pos # [1,3]
+           x, y = new_pos
+               #p coord
+               p x 
+               p y
+               # if x is inside board and y is inside board 8x8
+              if (x >= 0 && x <= 7) && (y >= 0 && y <= 7) then 
+                  valid_moves << new_pos 
+              end
+           end
+
         #KnightPathFinder::valid_moves([2,1])
         #KnightPathFinder::valid_moves([8,9])
        # binding.pry
-        
-        #return valid_moves
+      # new_pos is pos_x + MOVES and pos_y + MOVES
+      # if [pos_x + MOVES] <= 7 && [pos_x + MOVES] >= 0
+      # end
+        return valid_moves
 
     end
    
@@ -65,6 +81,8 @@ class KnightPathFinder
 end
 
 kpf = KnightPathFinder.new([0, 0])
+KnightPathFinder::valid_moves([2,1]) #=> [[0,0],[2,1]]
+KnightPathFinder::valid_moves([8,8]) #=> []
 
 kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
 kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
