@@ -2,7 +2,7 @@ require_relative '00_tree_node'
 
 
 class KnightPathFinder
-    attr_reader @start_pos #getter
+    attr_reader :start_pos #getter
     
     MOVES = [
         [-1,2],
@@ -14,12 +14,30 @@ class KnightPathFinder
         [-2,-1],
         [-2,1]
     ]
+    
+    def self.valid_moves(pos)
+        # KnightPathFinder::valid_moves(pos)
+        valid_moves = []
+        
+        
+        return valid_moves
+        
+    end
    
     def initialize(start_pos) 
         @start_pos = start_pos
-        @considered_positions = start_pos
+        @considered_positions = [start_pos]
         
         build_move_tree
+        
+    end
+    
+    # find path is a dfs or recursive backtracking
+    def build_move_tree
+        self.root_node = PolyTreeNode.new(start_pos)
+    end
+    
+    def new_move_positions(pos)
         
     end
   
@@ -40,5 +58,6 @@ end
 
 kpf = KnightPathFinder.new([0, 0])
 
-kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
-kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
+#kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
+#kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
+kpf.build_move_tree()

@@ -143,6 +143,8 @@ getter
 
 @start_pos = start_pos 
 
+attr_reader :start_pos
+
 ```
 kpf = KnightPathFinder.new([0, 0])
 kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
@@ -151,4 +153,55 @@ kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
 
 not a setter
 
+# key data structures 
 
+1. isSafe(row,col)
+2. placeQueen(row,col)
+3. removeQueen(row,col)
+
+try to make isSafe as easy as possible
+
+no scanning the board
+
+instead of a 2d array or matrix for isSafe
+
+add three additional single d arrays
+
+```
+private boolean[] colEmpty;
+private boolean[] upDiagEmtpy;
+private boolean[] downDiagEmpty;
+```
+
+place Queen is
+
+queenOnSquare[row][col] = true;
+
+colEmpty[col] = false
+
+upDiagEmtpy[row + col] = false
+
+downDiagEmpty[(boardSize -1) + row - col ]= false
+
+isSafe if column emtpy and up diagonal empty and down diagonal empty
+
+
+
+# find_path is dfs
+
+recursive backtracking
+
+# KnightPathFinder::valid_moves(pos)
+
+```
+::
+```
+
+sets global constant
+
+self.valid_moves(pos)
+
+
+# to do 
+
+build my own Rspec for this project or testing
