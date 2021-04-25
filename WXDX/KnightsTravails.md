@@ -201,6 +201,8 @@ sets global constant
 
 self.valid_moves(pos)
 
+if not off board valid move, for each MOVES see if off board
+
 
 # to do 
 
