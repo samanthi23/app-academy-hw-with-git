@@ -218,8 +218,6 @@ build my own Rspec for this project or testing
 
 ## irb 
 
-https://medium.com/@elle.westervelt/testing-your-ruby-code-irb-vs-pry-af12c87f87aa
-
 ```
 [11:37:41] ~
 // ♥ irb
@@ -240,3 +238,36 @@ gem install pry
 require 'pry'
 
 binding.pry right before like break
+
+# template element
+
+meaning in KnightsTravails
+
+n each cell in chess board
+
+off board solution found, at [7,7] pos end pos 
+
+val [pos] |x_coord, y_coord|
+
+isValid in an L-shaped
+
+applyValue
+
+removeValue
+
+return false not true then remove color from map
+
+if you already have tried the first two colors try the third color
+
+variables
+
+constraints
+
+factory scheduling each station
+
+room scheduling
+
+keeps track of the state of each variable in stack frame
+
+
+

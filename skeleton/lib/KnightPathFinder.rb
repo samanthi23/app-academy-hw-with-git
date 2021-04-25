@@ -20,6 +20,8 @@ class KnightPathFinder
         # KnightPathFinder::valid_moves(pos)
         # if not off board coord_x and coord_y then valid move
         valid_moves = []
+        # both the start and end position should be on an 8x8 chess board
+        # so valid_moves([8,8]) is good but valid_moves([8,9]) should not be ok
         coord_x, coord_y = pos
         #p coord_x
         #p coord_y
@@ -27,11 +29,11 @@ class KnightPathFinder
          #   p x_moves
          #   p y_moves # nil
            new_pos =  [coord_x + x_moves, coord_y + y_moves] 
-           p new_pos # [1,3]
+          # p new_pos # [1,3]
            x, y = new_pos
                #p coord
-               p x 
-               p y
+             #  p x 
+             #  p y
                # if x is inside board and y is inside board 8x8
               if (x >= 0 && x <= 7) && (y >= 0 && y <= 7) then 
                   valid_moves << new_pos 
@@ -50,25 +52,26 @@ class KnightPathFinder
    
     def initialize(start_pos) 
         @start_pos = start_pos
-   #     @considered_positions = [start_pos]
+        @considered_positions = [start_pos]
         
-     #   build_move_tree
+        build_move_tree
         
     end
     
     # find path is a dfs or recursive backtracking
-   # def build_move_tree
-     #   self.root_node = PolyTreeNode.new(start_pos)
-  #  end
+    def build_move_tree
+       self.root_node = PolyTreeNode.new(start_pos)
+    end
     
-   # def new_move_positions(pos)
-    #    @considered_positions # include?
-   # end
+    def new_move_positions(pos)
+        @considered_positions = [start_pos]
+        # include?
+   end
     
-  # def find_path
+   def find_path
      #  kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
     #kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
-  #  end 
+    end 
    
    # for each position on 8x8 board
    # if isSafe(row, col)
@@ -82,7 +85,7 @@ end
 
 kpf = KnightPathFinder.new([0, 0])
 KnightPathFinder::valid_moves([2,1]) #=> [[0,0],[2,1]]
-KnightPathFinder::valid_moves([8,8]) #=> []
+KnightPathFinder::valid_moves([8,8]) #=> [] # off board
 
 kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
 kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
