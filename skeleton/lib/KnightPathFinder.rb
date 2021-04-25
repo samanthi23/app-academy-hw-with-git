@@ -19,6 +19,14 @@ class KnightPathFinder
         # KnightPathFinder::valid_moves(pos)
         valid_moves = []
         
+        x, y = pos 
+        MOVES.each do |(x1, y1)|
+            new_pos = [x + x1, y + y1]
+            if new_pos.all? { |coord| coord.between?(0,7) }
+                valid_moves << new_pos
+            end 
+        
+        end
         
         return valid_moves
         
@@ -60,4 +68,5 @@ kpf = KnightPathFinder.new([0, 0])
 
 #kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
 #kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
-kpf.build_move_tree()
+#kpf.build_move_tree()
+kpf.valid_moves([2,1])
