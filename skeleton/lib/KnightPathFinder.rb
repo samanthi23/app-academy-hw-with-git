@@ -17,6 +17,7 @@ class KnightPathFinder
     
     def self.valid_moves(pos)
         # KnightPathFinder::valid_moves(pos)
+        # if not off board coord_x and coord_y then valid move
         valid_moves = []
         
         x, y = pos 
@@ -36,10 +37,10 @@ class KnightPathFinder
         @start_pos = start_pos
         @considered_positions = [start_pos]
         
-        build_move_tree
+        #build_move_tree
         
     end
-    
+=begin
     # find path is a dfs or recursive backtracking
     def build_move_tree
         self.root_node = PolyTreeNode.new(start_pos)
@@ -48,7 +49,7 @@ class KnightPathFinder
     def new_move_positions(pos)
         
     end
-  
+=end
    #def find_path
       # kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
     # kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
@@ -64,9 +65,15 @@ class KnightPathFinder
    # removeKnight(row,col)
 end
 
-kpf = KnightPathFinder.new([0, 0])
+#kpf = KnightPathFinder.new([0, 0])
 
 #kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
 #kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
 #kpf.build_move_tree()
-kpf.valid_moves([2,1])
+#kpf.valid_moves([2,1])
+
+if $PROGRAM_NAME == __FILE__
+  kpf = KnightPathFinder.new([0, 0])
+  #p kpf.find_path([7, 7])
+  p kpf.valid_moves([2,1])
+end

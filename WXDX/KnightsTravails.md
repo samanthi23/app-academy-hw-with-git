@@ -185,7 +185,11 @@ downDiagEmpty[(boardSize -1) + row - col ]= false
 
 isSafe if column emtpy and up diagonal empty and down diagonal empty
 
+no scanning needed
 
+if all true return true && 
+
+else return false not isSafe
 
 # find_path is dfs
 
@@ -203,6 +207,10 @@ self.valid_moves(pos)
 
 if not off board valid move, for each MOVES see if off board
 
+```
+3.between?(1, 5)               #=> true
+6.between?(1, 5)               #=> false
+```
 
 # to do 
 
