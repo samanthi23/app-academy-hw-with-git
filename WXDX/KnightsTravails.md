@@ -131,3 +131,24 @@ for loop is trying all possible values
 
 # The root node of the tree should be the knight's starting position. 
 
+def build_move_tree
+   
+    self.root_node = PolyTreeNode.new(start_pos)
+
+end
+
+# attr_reader
+
+getter
+
+@start_pos = start_pos 
+
+```
+kpf = KnightPathFinder.new([0, 0])
+kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
+kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
+```
+
+not a setter
+
+
