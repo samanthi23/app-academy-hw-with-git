@@ -19,9 +19,6 @@ class KnightPathFinder
         # KnightPathFinder::valid_moves(pos)
         valid_moves = []
         
-        MOVES.each do | coord_x, coord_y |
-            
-        end 
         
         return valid_moves
         
