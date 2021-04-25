@@ -24,6 +24,8 @@ class KnightPathFinder
         p coord_x
         p coord_y
         return pos 
+        #KnightPathFinder::valid_moves([2,1])
+        #KnightPathFinder::valid_moves([8,9])
        # binding.pry
         
         #return valid_moves
