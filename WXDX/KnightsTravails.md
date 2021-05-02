@@ -293,3 +293,13 @@ a.include?("b")   #=> true
 a.include?("z")   #=> false
 ```
 
+# BFS
+
+shortest if at the lowest level so level 2 instead of 4 or 5
+
+one knight move check if it is target(pos) [3,3] if so then return 
+
+that is the shortest path of knight L-shaped move to end pos from start pos
+
+
+
