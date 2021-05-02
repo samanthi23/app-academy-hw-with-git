@@ -301,5 +301,13 @@ one knight move check if it is target(pos) [3,3] if so then return
 
 that is the shortest path of knight L-shaped move to end pos from start pos
 
+use an array or a linked list or a tree in this case
+
+nodes = [root_node]
+
+push and shift 
+
+enqueue add to queue and shift remove from queue FIFO
+
 
 

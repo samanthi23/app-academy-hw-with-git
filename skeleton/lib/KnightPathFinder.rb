@@ -61,6 +61,8 @@ class KnightPathFinder
     # find path is a dfs or recursive backtracking
     def build_move_tree
        self.root_node = PolyTreeNode.new(start_pos)
+       nodes = [root_node]
+       # build BFS
        
     end
     
