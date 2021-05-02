@@ -269,5 +269,27 @@ room scheduling
 
 keeps track of the state of each variable in stack frame
 
+# KnightPathFinder::valid_moves(pos)
 
+KnightPathFinder.valid_moves
+
+except in array add each
+
+# .reject 
+
+reject() public
+Returns a new array containing the items in self for which the given block is not true. The ordering of non-rejected elements is maintained.
+
+n % 2 == 0 returns all odd numbers
+
+.each add 
+
+<<
+
+# include?
+```
+a = [ "a", "b", "c" ]
+a.include?("b")   #=> true
+a.include?("z")   #=> false
+```
 
