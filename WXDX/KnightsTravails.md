@@ -309,5 +309,22 @@ push and shift
 
 enqueue add to queue and shift remove from queue FIFO
 
+if pos == end_pos return [3,3] == [3,3] or [2,1] == [2,1] return, this is the goal state
+
+initial state is empty 8x8 chess board
+
+move Knight in L-shape is the operators
+
+cost?
+
+if initial state is gaol state return itif not apply operators
+
+from [0,0] there are 8 moves or operators, successors, so possible 8 nodes in build_move_tree
+
+if you use a stack to store them or a queue to store them the success
+
+loop
+
+
 
 
