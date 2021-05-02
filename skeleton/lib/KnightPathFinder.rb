@@ -61,16 +61,18 @@ class KnightPathFinder
     # find path is a dfs or recursive backtracking
     def build_move_tree
        self.root_node = PolyTreeNode.new(start_pos)
+       
     end
     
     def new_move_positions(pos)
-        @considered_positions = [start_pos]
+        KnightPathFinder.valid_moves(pos).reject { |new_pos| @considered_positions.include?(new_pos) }.each { | pos | @considered_positions << pos }
         # include?
    end
     
    def find_path
      #  kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
     #kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
+    #recrusive backtracking
     end 
    
    # for each position on 8x8 board
