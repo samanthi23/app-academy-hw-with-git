@@ -391,8 +391,30 @@ end_node is end_pos
 while(searcher.hasNextNode)
 N = next node 
 
-if n isthe goal return n
+if n is the goal return n
 
 searcher.addNodes(list of N's successors)
+
+# Part 2
+
+dfs
+
+trace back on current path 
+
+have access for nodes in that path
+
+# Queue
+
+addnode
+
+nextnode
+.remove
+
+will find the 7th step one before the 12th step one
+
+4 successors only 4 operators 8-puzzle
+
+O(b^d) steps and memory
+
 
 
