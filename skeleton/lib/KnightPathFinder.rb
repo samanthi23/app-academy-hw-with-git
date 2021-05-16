@@ -63,6 +63,19 @@ class KnightPathFinder
        self.root_node = PolyTreeNode.new(start_pos)
        nodes = [root_node]
        # build BFS
+       #check root node if goal state then done
+       until nodes.empty?
+           current_node = nodes.shift
+           current_pos = current_node.value
+           new_move_positions(current_pos).each do |new_pos|
+               new_node = PolyTreeNode.new(new_pos)
+               current_node.add_child(new_node)
+               # current node add child new node
+                nodes << new_node
+            end
+           end
+       
+       
        
     end
     

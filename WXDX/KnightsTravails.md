@@ -325,6 +325,57 @@ if you use a stack to store them or a queue to store them the success
 
 loop
 
+# BFS
 
+next_node = PolyTreeNode.new([new_pos])
+
+current_node
+
+test if you are in that particular case
+
+test initial state
+
+check initial state first node of tree if goal state then done 
+
+else generate all of its successor states
+
+take one state at a time out of its children test it and generate more successors until we find the goal state
+
+Object state
+
+SearchNode predecessors - trace back and see the sequence of actions that led us to the goal state
+
+which operator applied
+
+number of steps to goal state
+
+costfromStart
+
+estimateofRemainingCost
+
+State Space Search Tree
+
+point down or point up in this case pint up so  recursive backtracing or recursion
+
+initial node forms the root of the tree
+
+depth of 1
+
+successors have a dept of 2
+
+data structure that contains the search nodes that we have yet to consider
+
+# current_pos = current_node.value
+
+[[0,0], [2,1]]
+
+next_node = PolyTreeNode.new([0,0])
+next_node = PolyTreeNode.new([2,1])
+
+new_move_positions
+
+fully defined functions
+
+and some instance variables
 
 
