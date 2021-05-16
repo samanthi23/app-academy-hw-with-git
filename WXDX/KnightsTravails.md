@@ -378,4 +378,21 @@ fully defined functions
 
 and some instance variables
 
+# searcher.addNode([2,1])
+
+current_node.add_child(new_node)
+
+# dfs
+
+end_node is end_pos 
+
+# pseudo code for finding a solution
+
+while(searcher.hasNextNode)
+N = next node 
+
+if n isthe goal return n
+
+searcher.addNodes(list of N's successors)
+
 
