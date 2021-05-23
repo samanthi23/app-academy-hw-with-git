@@ -416,5 +416,29 @@ will find the 7th step one before the 12th step one
 
 O(b^d) steps and memory
 
+# dfs end_node value
+
+.reverse
+
+from end node using end_pos
+
+trace-back_path 
+
+.reverse
+
+return values
+
+# .map(&:value)
+
+["11", "21", "5"].map(&:to_i)
+
+returns a new array that turns numbers into integers
+
+returns a new array of values
+
+
+
+
+
 
 
