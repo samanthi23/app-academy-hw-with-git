@@ -436,6 +436,10 @@ returns a new array that turns numbers into integers
 
 returns a new array of values
 
+q for quit until pry(main)>
+
+
+
 
 
 

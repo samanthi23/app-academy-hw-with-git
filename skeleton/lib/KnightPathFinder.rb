@@ -87,11 +87,29 @@ class KnightPathFinder
         # include?
    end
     
-   def find_path
+   def find_path(end_pos)
+   end_node = root_node.dfs(end_pos)
+   
+   trace_path_back(end_node)
+   .reverse
+   .map(&:value)
      #  kpf.find_path([2, 1]) # => [[0, 0], [2, 1]]
     #kpf.find_path([3, 3]) # => [[0, 0], [2, 1], [3, 3]]
     #recrusive backtracking
+    
     end 
+    
+    def trace_path_back(end_node)
+       # add each value to an array 
+        array = []
+       current_node = end_node
+       until current_node.nil?
+         
+          array << current_node
+          current_node = current_node.parent
+       end
+       array
+    end
    
    # for each position on 8x8 board
    # if isSafe(row, col)
