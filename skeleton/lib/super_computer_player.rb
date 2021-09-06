@@ -9,6 +9,10 @@ class SuperComputerPlayer < ComputerPlayer
     
     # no winning node
     # choose one that is not losing_node
+    node = possible_nodes.find {|node| !node.losing_node?(mark) }
+    return node.prev_move_pos if node
+    
+    raise "I'm going to lose"
   end
 end
 
